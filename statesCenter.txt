@@ -1,0 +1,30 @@
+State - Center
+Andhra Pradesh - Krishna
+Arunachal Pradesh - West Siang
+Assam - Hojai
+Bihar - Samastipur
+Chhattisgarh - Drug/Raipur
+Goa - Ponda
+Gujarat - Ahmadabad
+Haryana - Rohtak
+Himachal Pradesh - Kullu/ Mandi
+Jammu and Kashmir - Kulgam
+Jharkhand - Ramgarh
+Karnataka - Haveri
+Kerala - Thrissur/Palakkad
+Madhya Pradesh - Raisen
+Maharashtra - Jalna/Bid
+Manipur - Imphal west
+Meghalaya - West Khasi Hills
+Mizoram - Serchhip
+Nagaland - Zunheboto
+Odisha - Boudh
+Punjab - Moga
+Rajasthan- Nagaur
+Sikkim - North Sikkim(bottom)
+Tamil Nadu - Karur/Thiruchirapalli
+Telangana - Siddipet
+Tripura - Dhalai/Khowai
+Uttar Pradesh - Hardoi
+West Bengal - Murshidabad
+Uttarakhand - Rudraprayag
