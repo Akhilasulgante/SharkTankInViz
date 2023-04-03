@@ -12,17 +12,46 @@ async function getData() {
     y: Math.random() * height,
   }));
 
-  console.log(data);
+  const svg = d3.select("svg").attr("viewBox", [0, 0, width, height]);
 
-  const circles = d3
-    .select("svg")
+  const circles = svg
+    .append("g")
+    .attr("id", "companies")
     .selectAll("circle")
     .data(data)
     .join("circle")
     .attr("cx", (d) => d.x)
     .attr("cy", (d) => d.y)
-    .attr("r", 10)
+    .attr("r", 3)
     .style("fill", "red");
+
+  const maprawdata = await fetch("./IndianMap.json");
+  const mapdataText = await maprawdata.text();
+  let india_map = JSON.parse(mapdataText);
+
+  function drawMap() {
+    console.log("drawing map");
+    const path = d3.geoPath();
+    const maps = svg
+      .append("g")
+      .attr("id", "map")
+      .selectAll("path")
+      .data(topojson.feature(india_map, india_map.objects.states).features)
+      .join("path")
+      .attr("class", (d) => {
+        return d.properties.district;
+      })
+      .attr("d", path);
+
+    let parentElement = document.querySelector("svg");
+    // Get the parent's first child
+    let theFirstChild = parentElement.firstChild;
+
+    // Insert the new element before the first child
+    parentElement.insertBefore(document.querySelector("#map"), theFirstChild);
+
+    console.log("map", document.querySelector("#map"));
+  }
 
   function moveLeft() {
     // circles.transition().duration(750).attr("cx", 10);
@@ -42,23 +71,15 @@ async function getData() {
       .attr("cy", (d) => d.y);
   }
 
-  const callbacks = [
-    moveLeft,
-    moveX,
-    moveY,
-    moveLeft,
-    moveX,
-    moveY,
-    moveLeft,
-    moveX,
-    moveY,
-    moveLeft,
-    moveX,
-    moveY,
-    moveLeft,
-    moveX,
-    moveY,
-  ];
+  function moveXY() {
+    circles
+      .transition()
+      .duration(750)
+      .attr("cx", (d) => 135.781)
+      .attr("cy", (d) => 343.095);
+  }
+
+  const callbacks = [moveLeft, drawMap, moveXY];
 
   // instantiate the scrollama
   const scroller = scrollama();
