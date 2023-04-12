@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participation</title>
+</head>
+<body>
+    <div class="nav" style="top:30px;left: 30px; display:flex;position: relative;">
+        <div>
+        <a href="./participation.html">Participation</a>
+      </div>
+      <div style="padding-left:5px;padding-right: 5px;">  | </div>
+      <div>
+        <a href="./investments.html">Investments</a>
+      </div>
+      </div>
+    <h1 style="text-align:center">Pitches</h1>
+    <h2 style="padding-left: 50px;">Relative Pitches</h2>
+    <div class="relativePitches" style="position:relative;">
+    <div style="display:flex;padding-top: 80px;width: 100%;">
+    <div id="observablehq-statesDiffwithIndustryChart-f3c11fa8"></div>   
+    <div id="observablehq-key-f3c11fa8" style="width:20px;padding-left: 20px;padding-right: 200px;"></div>
+    <p style="width:400px;padding-top: 100px;">Pariatur ut deserunt enim exercitation do dolor in exercitation voluptate dolor officia excepteur aliquip ullamco. Do ipsum excepteur ullamco deserunt fugiat excepteur quis deserunt veniam amet deserunt proident. Eiusmod adipisicing consectetur ipsum cillum exercitation nulla aliquip ullamco. Irure incididunt aute occaecat qui ad dolor non Lorem magna tempor aute non aliqua. Ea duis eiusmod commodo dolor. Elit velit aliqua consectetur tempor labore mollit dolore eu anim et proident elit est ut.</p>
+
+</div>
+    <div class="Valuation">
+        <h2 style="padding-left: 50px;">Valuation</h2>
+        <div id="observablehq-industry_valuation_legend-347ed2e1" style="width:5px"></div>
+
+        <div style="display:flex">
+        <div id="observablehq-industry_valuation-347ed2e1"></div>
+        <div style="display:flex;flex-direction: column;">
+        <div id="observablehq-viewof-orderValuation-c8502bde" style="padding-left:100px"></div>
+        <p style="width:400px;padding-top: 100px;padding-left: 60px;">Pariatur ut deserunt enim exercitation do dolor in exercitation voluptate dolor officia excepteur aliquip ullamco. Do ipsum excepteur ullamco deserunt fugiat excepteur quis deserunt veniam amet deserunt proident. Eiusmod adipisicing consectetur ipsum cillum exercitation nulla aliquip ullamco. Irure incididunt aute occaecat qui ad dolor non Lorem magna tempor aute non aliqua. Ea duis eiusmod commodo dolor. Elit velit aliqua consectetur tempor labore mollit dolore eu anim et proident elit est ut.</p>
+        </div>
+        <div id="observablehq-orderValuationChart-9ce0baa0" style="display:None"></div>
+</div>
+</div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/@akhila/diving-into-the-waters-of-shark-tank-india.js?v=3";
+    new Runtime().module(define, name => {
+      if (name === "key") return new Inspector(document.querySelector("#observablehq-key-f3c11fa8"));
+      if (name === "statesDiffwithIndustryChart") return new Inspector(document.querySelector("#observablehq-statesDiffwithIndustryChart-f3c11fa8"));
+      if (name === "industry_valuation_legend") return new Inspector(document.querySelector("#observablehq-industry_valuation_legend-347ed2e1"));
+  if (name === "industry_valuation") return new Inspector(document.querySelector("#observablehq-industry_valuation-347ed2e1"));
+  if (name === "viewof orderValuation") return new Inspector(document.querySelector("#observablehq-viewof-orderValuation-c8502bde"));
+  if (name === "orderValuationChart") return new Inspector(document.querySelector("#observablehq-orderValuationChart-9ce0baa0"));
+    });
+    </script>
+    </div>
+</body>
+</html>
