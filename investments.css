@@ -1,6 +1,7 @@
 .zoomablesunburst {
-  width: 500px;
-  height: 600px;
+  width: 800px;
+  height: 800px;
+  padding-left: 100px;
 }
 
 .idiom1 {
@@ -8,6 +9,7 @@
 }
 
 .cascadedTreemap {
-  width: 400px;
-  height: 600px;
+  width: 1300px;
+  height: 1400px;
+  padding-left: 50px;
 }
