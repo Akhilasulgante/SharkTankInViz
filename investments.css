@@ -1,15 +1,30 @@
-.zoomablesunburst {
-  width: 800px;
-  height: 800px;
-  padding-left: 100px;
-}
-
 .idiom1 {
   display: flexbox;
 }
 
-.cascadedTreemap {
-  width: 1300px;
-  height: 1400px;
-  padding-left: 50px;
+.meetsharks {
+  display: flex;
+}
+
+.sharks {
+  width: 100%;
+  max-width: 200px;
+  max-height: 200px;
+  height: 200px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  padding-top: 2%;
+}
+.grid div {
+  /* border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3); */
+  max-width: 100%;
+}
+
+p {
+  font-family: Poppins;
 }
